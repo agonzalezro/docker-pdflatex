@@ -1,7 +1,10 @@
 FROM ubuntu:12.04
 MAINTAINER Alexandre Gonzalez <agonzalezro@gmail.com>
 
-RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse" > /etc/apt/sources.list && apt-get update &&  apt-get -y install texlive-latex-extra texlive-fonts-recommended &&  apt-get clean && apt-get purge
+RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse" > /etc/apt/sources.list && \ 
+  apt-get update &&  \
+  apt-get -y install texlive-latex-extra texlive-fonts-recommended &&  \
+  apt-get clean && apt-get purge
 
 VOLUME ["/output"]
 
